@@ -1,15 +1,17 @@
-FROM ubuntu:latest AS build
+FROM gradle:8.7-jdk17 AS build
 
-RUN apt-get update
-RUN apt-get install openjdk-17-jdk -y
+WORKDIR /app
+
 COPY . .
 
-RUN ./gradlew bootJar --no-daemon
+RUN gradle bootJar --no-daemon
 
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jre
+
+WORKDIR /app
+
+COPY --from=build /app/build/libs/*.jar app.jar
 
 EXPOSE 8080
 
-COPY --from=build /build/libs/livescorei-0.0.1-SNAPSHOT.jar applive.jar
-
-ENTRYPOINT ["java", "-jar", "applive.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
