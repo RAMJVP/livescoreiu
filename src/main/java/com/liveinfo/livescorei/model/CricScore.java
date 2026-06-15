@@ -8,6 +8,7 @@ public class CricScore {
     private List<MatchData> data;
     private String status;
     private Info info;
+     private boolean live;
     
      CricScore(){
     	
@@ -18,6 +19,8 @@ public class CricScore {
 		this.data = builder.data;
 		this.status = builder.status;
 		this.info = builder.info;
+		this.live = builder.live;
+		 
 	}
 
     // Getters and Setters
@@ -62,7 +65,8 @@ public class CricScore {
 		private List<MatchData> data = Collections.emptyList();
 		private String status;
 		private Info info;
-
+    private boolean live;
+ 
 		public Builder() {
 		}
 
