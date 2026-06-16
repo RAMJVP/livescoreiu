@@ -27,9 +27,15 @@ public class CricScore {
     public String getApikey() {
         return apikey;
     }
-
+public boolean getLive() {
+        return live;
+    }
     public void setApikey(String apikey) {
         this.apikey = apikey;
+    }
+    
+     public void setlive(boolean live) {
+        this.live = live;
     }
 
     public List<MatchData> getData() {
@@ -89,7 +95,10 @@ public class CricScore {
 			this.info = info;
 			return this;
 		}
-
+public Builder withLive(boolean live) {
+			this.live = live;
+			return this;
+		}
 		public CricScore build() {
 			return new CricScore(this);
 		}
