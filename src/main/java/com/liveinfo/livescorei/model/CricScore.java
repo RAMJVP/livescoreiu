@@ -23,7 +23,7 @@ public class CricScore {
 		 
 	}
 
-    // Getters and Setters
+    // Getters and Setters ab
     public String getApikey() {
         return apikey;
     }
