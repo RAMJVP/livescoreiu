@@ -72,7 +72,7 @@ public class CricScoreService {
 								  DateTimeUtil.compareLocalDateTimeAndZonedDateTime(m.getDateTimeGMT(),
 								  dateTimeService.toGmtZonedDateTime(currentDate))>= 0
 						 ).
-						collect(Collectors.toList())).withStatus(cricScoreList.getStatus()).withInfo(cricScoreList.getInfo()).withLive(false).build();
+						collect(Collectors.toList())).withStatus(cricScoreList.getStatus()).withInfo(cricScoreList.getInfo()).withLive1(false).build();
 				
 			 
 			 //System.out.println("cricScoreList "+cricScoreList);

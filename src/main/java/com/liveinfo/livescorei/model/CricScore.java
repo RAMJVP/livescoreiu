@@ -8,7 +8,7 @@ public class CricScore {
     private List<MatchData> data;
     private String status;
     private Info info;
-     private boolean live;
+     private boolean live1;
     
      CricScore(){
     	
@@ -19,7 +19,7 @@ public class CricScore {
 		this.data = builder.data;
 		this.status = builder.status;
 		this.info = builder.info;
-		this.live = builder.live;
+		this.live1 = builder.live1;
 		 
 	}
 
@@ -27,15 +27,15 @@ public class CricScore {
     public String getApikey() {
         return apikey;
     }
-public boolean getLive() {
-        return live;
+public boolean getLive1() {
+        return live1;
     }
     public void setApikey(String apikey) {
         this.apikey = apikey;
     }
     
-     public void setlive(boolean live) {
-        this.live = live;
+     public void setlive1(boolean live1) {
+        this.live1 = live1;
     }
 
     public List<MatchData> getData() {
@@ -71,7 +71,7 @@ public boolean getLive() {
 		private List<MatchData> data = Collections.emptyList();
 		private String status;
 		private Info info;
-    private boolean live;
+    private boolean live1;
  
 		public Builder() {
 		}
@@ -95,8 +95,8 @@ public boolean getLive() {
 			this.info = info;
 			return this;
 		}
-public Builder withLive(boolean live) {
-			this.live = live;
+public Builder withLive1(boolean live1) {
+			this.live1 = live1;
 			return this;
 		}
 		public CricScore build() {
